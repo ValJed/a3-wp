@@ -30,6 +30,9 @@ require('apostrophe')({
     asset: {},
     // The project's first custom page type.
     'default-page': {},
+
+    article: {},
+
     '@apostrophecms-pro/doc-template-library': {}
   }
 });
