@@ -40,7 +40,8 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "apostrophe": "^3.0.0",
+    "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
+    "apostrophe": "github:apostrophecms/apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
