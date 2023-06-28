@@ -32,6 +32,8 @@ require('apostrophe')({
     'default-page': {},
 
     article: {},
+    '@apostrophecms-pro/advanced-permission-group': {},
+    '@apostrophecms-pro/advanced-permission': {},
 
     '@apostrophecms-pro/doc-template-library': {}
   }

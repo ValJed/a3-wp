@@ -40,6 +40,10 @@ module.exports = {
             '@apostrophecms/video': {}
           }
         }
+      },
+      description: {
+        label: 'Description',
+        type: 'string'
       }
     },
     group: {
@@ -49,6 +53,10 @@ module.exports = {
           'title',
           'main'
         ]
+      },
+      description: {
+        label: 'Description',
+        fields: [ 'description' ]
       }
     }
   }
