@@ -1,19 +1,11 @@
 module.exports = {
   extend: '@apostrophecms/piece-type',
-  fields(self) {
-    return {
-      add: {
-        description: {
-          label: 'Description',
-          type: 'string'
-        }
-      },
-      group: {
-        basics: {
-          /* label: 'Basics', */
-          fields: [ 'description' ]
-        }
-      }
-    };
+  options: {
+    label: 'Article',
+    // Additionally add a `pluralLabel` option if needed.
+  },
+  fields: {
+    add: {},
+    group: {}
   }
 };

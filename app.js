@@ -32,6 +32,7 @@ require('apostrophe')({
     'default-page': {},
 
     article: {},
+    'article-page': {},
     '@apostrophecms-pro/advanced-permission-group': {},
     '@apostrophecms-pro/advanced-permission': {},
 
