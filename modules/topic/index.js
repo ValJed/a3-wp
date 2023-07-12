@@ -1,7 +1,8 @@
+
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
-    label: 'Article'
+    label: 'Topic'
     // Additionally add a `pluralLabel` option if needed.
   },
   filters: {
@@ -36,7 +37,6 @@ module.exports = {
   methods(self) {
     return {
       getChapters(req, data) {
-        console.log('data', data);
         return [
           {
             label: 'Chapter 1',
