@@ -22,10 +22,8 @@
       "./node_modules/apostrophe/modules/@apostrophecms/**/*",
       "./node_modules/@apostrophecms-pro/doc-template-library/modules/**",
       "./node_modules/@apostrophecms-pro/doc-template-library/index.js",
-      
       "./node_modules/@apostrophecms-pro/advanced-permission/modules/**",
       "./node_modules/@apostrophecms-pro/advanced-permission/index.js",
-
       "./node_modules/@apostrophecms/**/*"
     ],
     "ignoreRoot": [
@@ -51,6 +49,7 @@
   "dependencies": {
     "@apostrophecms-pro/advanced-permission": "^1.6.1",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
+    "@apostrophecms-pro/document-versions": "^1.1.0",
     "apostrophe": "github:apostrophecms/apostrophe",
     "normalize.css": "^8.0.1"
   },
