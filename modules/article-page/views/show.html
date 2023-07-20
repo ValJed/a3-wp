@@ -1,10 +1,8 @@
 {# modules/article-page/views/show.html #}
 {% extends "layout.html" %}
-
 {% block main %}
-  <h1>{{ data.piece.title }}</h1>
-  <section>
-    {% area data.piece, 'body' %}
-  </section>
+    <h1>{{ data.piece.title }}</h1>
+    <section>
+        {% area data.piece, 'main' %}
+    </section>
 {% endblock %}
-

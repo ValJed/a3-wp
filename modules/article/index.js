@@ -4,50 +4,27 @@ module.exports = {
     label: 'Article'
     // Additionally add a `pluralLabel` option if needed.
   },
-  filters: {
-    add: {
-      test: {
-        label: 'apostrophe:type',
-        choices: [
-          {
-            label: 'Val 1',
-            value: 'val1'
-          },
-          {
-            label: 'Val 2',
-            value: 'val2'
-          }
-        ],
-        def: null
-      }
-    },
-    remove: [ 'visibility' ]
-  },
   fields: {
     add: {
-      chapters: {
-        label: 'Chapters',
-        type: 'select',
-        choices: 'getChapters'
+      description: {
+        label: 'Description',
+        type: 'string'
+      },
+      main: {
+        type: 'area',
+        options: {
+          widgets: {
+            '@apostrophecms/rich-text': {},
+            '@apostrophecms/image': {},
+            '@apostrophecms/video': {}
+          }
+        }
       }
     },
-    group: {}
-  },
-  methods(self) {
-    return {
-      getChapters(req, data) {
-        console.log('data', data);
-        return [
-          {
-            label: 'Chapter 1',
-            value: 1
-          },
-          {
-            label: 'Chapter 2',
-            value: 2
-          }
-        ];
+    group: {
+      basics: {
+        fields: [ 'description', 'main' ]
       }
-    };
+    }
   }
 };

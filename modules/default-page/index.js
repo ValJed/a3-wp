@@ -44,6 +44,11 @@ module.exports = {
       description: {
         label: 'Description',
         type: 'string'
+      },
+      _articles: {
+        label: 'Articles',
+        type: 'relationship',
+        withType: 'article'
       }
     },
     group: {
@@ -51,7 +56,8 @@ module.exports = {
         label: 'Basics',
         fields: [
           'title',
-          'main'
+          'main',
+          '_articles'
         ]
       },
       description: {

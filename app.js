@@ -38,6 +38,7 @@ require('apostrophe')({
     '@apostrophecms-pro/advanced-permission': {},
 
     '@apostrophecms-pro/doc-template-library': {},
-    '@apostrophecms-pro/document-versions': {}
+    '@apostrophecms-pro/document-versions': {},
+    '@apostrophecms/scheduled-publishing': {}
   }
 });
