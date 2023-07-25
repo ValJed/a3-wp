@@ -39,6 +39,7 @@ require('apostrophe')({
 
     '@apostrophecms-pro/doc-template-library': {},
     '@apostrophecms-pro/document-versions': {},
-    '@apostrophecms/scheduled-publishing': {}
+    '@apostrophecms/scheduled-publishing': {},
+    '@apostrophecms/redirect': {}
   }
 });

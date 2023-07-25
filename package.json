@@ -50,6 +50,7 @@
     "@apostrophecms-pro/advanced-permission": "^1.6.1",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
     "@apostrophecms-pro/document-versions": "^1.1.0",
+    "@apostrophecms/redirect": "^1.2.2",
     "@apostrophecms/scheduled-publishing": "^1.0.3",
     "apostrophe": "github:apostrophecms/apostrophe",
     "normalize.css": "^8.0.1"
