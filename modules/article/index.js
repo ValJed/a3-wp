@@ -11,6 +11,7 @@ module.exports = {
         type: 'string'
       },
       main: {
+        label: 'Main',
         type: 'area',
         options: {
           widgets: {
@@ -23,7 +24,10 @@ module.exports = {
     },
     group: {
       basics: {
-        fields: [ 'description', 'main' ]
+        fields: [
+          'description',
+          'main'
+        ]
       }
     }
   }
