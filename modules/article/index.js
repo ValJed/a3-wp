@@ -20,13 +20,19 @@ module.exports = {
             '@apostrophecms/video': {}
           }
         }
+      },
+      _topics: {
+        label: 'Topics',
+        type: 'relationship',
+        withType: 'topic'
       }
     },
     group: {
       basics: {
         fields: [
           'description',
-          'main'
+          'main',
+          '_topics'
         ]
       }
     }

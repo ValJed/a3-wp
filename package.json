@@ -47,12 +47,13 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
+    "apostrophe": "github:apostrophecms/apostrophe",
     "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
-    "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
+    "@apostrophecms/import-export": "github:apostrophecms/import-export",
+    "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "^1.0.3",
-    "apostrophe": "github:apostrophecms/apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
