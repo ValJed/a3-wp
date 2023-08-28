@@ -20,11 +20,10 @@
       "./views/**/*.html",
       "./src/**/*",
       "./node_modules/apostrophe/modules/@apostrophecms/**/*",
-      "./node_modules/@apostrophecms-pro/doc-template-library/modules/**",
-      "./node_modules/@apostrophecms-pro/doc-template-library/index.js",
-      "./node_modules/@apostrophecms-pro/advanced-permission/modules/**",
-      "./node_modules/@apostrophecms-pro/advanced-permission/index.js",
-      "./node_modules/@apostrophecms/**/*"
+      "./node_modules/@apostrophecms/import-export/lib/**",
+      "./node_modules/@apostrophecms/import-export/modules/**",
+      "./node_modules/@apostrophecms/import-export/ui/**",
+      "./node_modules/@apostrophecms/import-export/index.js"
     ],
     "ignoreRoot": [
       ".git"
