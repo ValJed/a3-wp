@@ -21,6 +21,10 @@ module.exports = {
           }
         }
       },
+      image: {
+        type: 'attachment',
+        group: 'images'
+      },
       _topics: {
         label: 'Topics',
         type: 'relationship',
@@ -32,6 +36,7 @@ module.exports = {
         fields: [
           'description',
           'main',
+          'image',
           '_topics'
         ]
       }

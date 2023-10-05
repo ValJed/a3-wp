@@ -1,4 +1,5 @@
 require('apostrophe')({
+  baseUrl: 'http://localhost:3000',
   shortName: 'a3-wp',
   modules: {
     // Apostrophe module configuration

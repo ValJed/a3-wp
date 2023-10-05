@@ -2,8 +2,10 @@
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
-    label: 'Topic'
-    // Additionally add a `pluralLabel` option if needed.
+    label: 'Topic',
+    importExport: {
+      import: false
+    }
   },
   filters: {
     add: {
@@ -26,13 +28,16 @@ module.exports = {
   },
   fields: {
     add: {
-      chapters: {
-        label: 'Chapters',
-        type: 'select',
-        choices: 'getChapters'
+      description: {
+        label: 'Description',
+        type: 'string'
       }
     },
-    group: {}
+    group: {
+      basics: {
+        fields: [ 'description' ]
+      }
+    }
   },
   methods(self) {
     return {
