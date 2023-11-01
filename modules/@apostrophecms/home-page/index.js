@@ -16,7 +16,9 @@ module.exports = {
                 'italic',
                 'strike',
                 'link',
+                'anchor',
                 '|',
+                'image',
                 'bulletList',
                 'orderedList'
               ],
