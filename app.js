@@ -41,6 +41,8 @@ require('apostrophe')({
 
     '@apostrophecms-pro/doc-template-library': {},
     '@apostrophecms-pro/document-versions': {},
+    '@apostrophecms-pro/data-set': {},
+    '@apostrophecms-pro/data-set-widget': {},
     '@apostrophecms/scheduled-publishing': {},
     '@apostrophecms/redirect': {},
     '@apostrophecms/import-export': {}

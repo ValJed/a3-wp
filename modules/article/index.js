@@ -10,6 +10,8 @@ module.exports = {
         label: 'Array',
         type: 'array',
         inline: true,
+        style: 'table',
+        draggable: true,
         fields: {
           add: {
             toto: {
