@@ -9,8 +9,28 @@ module.exports = {
       array: {
         label: 'Array',
         type: 'array',
+        fields: {
+          add: {
+            toto: {
+              label: 'toto',
+              type: 'string',
+              requiredIf: {
+                showToto: true
+              }
+            },
+            showToto: {
+              label: 'Require Toto',
+              type: 'boolean'
+            }
+          }
+        }
+      },
+
+      arrayInline: {
+        label: 'Array Inline',
+        type: 'array',
         inline: true,
-        style: 'table',
+        /* style: 'table', */
         draggable: true,
         fields: {
           add: {
@@ -146,7 +166,8 @@ module.exports = {
       arr: {
         label: 'Array',
         fields: [
-          'array'
+          'array',
+          'arrayInline'
         ]
       },
       object: {
