@@ -20,10 +20,10 @@
       "./views/**/*.html",
       "./src/**/*",
       "./node_modules/apostrophe/modules/@apostrophecms/**/*",
+      "./node_modules/@apostrophecms-pro/advanced-permission/index.js",
       "./node_modules/@apostrophecms-pro/advanced-permission/lib/**/*",
       "./node_modules/@apostrophecms-pro/advanced-permission/modules/**",
-      "./node_modules/@apostrophecms-pro/advanced-permission/ui/**",
-      "./node_modules/@apostrophecms-pro/advanced-permission/index.js"
+      "./node_modules/@apostrophecms-pro/advanced-permission/ui/**"
     ],
     "ignoreRoot": [
       ".git"
@@ -43,14 +43,14 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
+    "@apostrophecms-pro/advanced-permission": "file:../advanced-permission",
     "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
-    "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
-    "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
+    "@apostrophecms-pro/doc-template-library": "file:../doc-template-library",
+    "@apostrophecms-pro/document-versions": "file:../document-versions",
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
-    "apostrophe": "github:apostrophecms/apostrophe",
+    "apostrophe": "file:../apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

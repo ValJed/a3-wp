@@ -2,7 +2,12 @@ module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
     label: 'Article'
+    /* localized: false */
+
     // Additionally add a `pluralLabel` option if needed.
+  },
+  init(self) {
+    self.addTestFieldType();
   },
   fields: {
     add: {
@@ -14,109 +19,25 @@ module.exports = {
             toto: {
               label: 'toto',
               type: 'string',
-              requiredIf: {
+              if: {
                 showToto: true
               }
             },
             showToto: {
               label: 'Require Toto',
-              type: 'boolean'
+              type: 'boolean',
+              def: false
             }
           }
         }
       },
 
-      arrayInline: {
-        label: 'Array Inline',
-        type: 'array',
-        inline: true,
-        /* style: 'table', */
-        draggable: true,
-        fields: {
-          add: {
-            toto: {
-              label: 'toto',
-              type: 'string',
-              requiredIf: {
-                showToto: true
-              }
-            },
-            showToto: {
-              label: 'Require Toto',
-              type: 'boolean'
-            }
-          }
-        }
-      },
-      object: {
-        label: 'Object',
-        type: 'object',
-        fields: {
-          add: {
-            showTutu: {
-              label: 'require tutu',
-              type: 'boolean',
-              def: true
-            },
-            tutu: {
-              label: 'Tutu',
-              type: 'string',
-              requiredIf: { showTutu: true }
-            }
-          }
-        }
-      },
-      showDescription: {
-        label: 'Show description',
-        type: 'boolean',
-        def: true
-      },
-      date: {
-        label: 'Date',
-        type: 'dateAndTime',
-        requiredIf: {
-          showDescription: true
-        }
-      },
       description: {
         label: 'Description',
         type: 'string',
-        required: true,
-        if: {
-          showDescription: true,
-          'showInfo()': true
-        }
+        required: true
       },
-      /* showInfo: { */
-      /*   label: 'Info Required', */
-      /*   type: 'boolean', */
-      /*   def: true */
-      /* }, */
-      showInfo: {
-        label: 'Show Info',
-        type: 'select',
-        choices: [
-          {
-            label: '1',
-            value: 1
-          },
-          {
-            label: '2',
-            value: 2
-          },
-          {
-            label: '3',
-            value: 3
-          }
-        ]
-      },
-      info: {
-        label: 'Info',
-        type: 'string',
-        requiredIf: {
-          showInfo: 2
-        }
-      },
+
       main: {
         label: 'Main',
         type: 'area',
@@ -152,14 +73,11 @@ module.exports = {
     group: {
       basics: {
         fields: [
-          'object',
-          'showDescription',
           'description',
-          'date',
-          'showInfo',
-          'info',
           'main',
           'image',
+          'test',
+          '_followed',
           '_topics'
         ]
       },
@@ -180,6 +98,14 @@ module.exports = {
     return {
       showInfo() {
         return true;
+      },
+
+      addTestFieldType() {
+        self.apos.schema.addFieldType({
+          name: 'test',
+          extend: 'string',
+          vueComponent: 'AposInputTest'
+        });
       }
     };
   }

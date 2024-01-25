@@ -58,12 +58,9 @@ module.exports = {
         fields: [
           'title',
           'main',
-          '_articles'
+          '_articles',
+          'description'
         ]
-      },
-      description: {
-        label: 'Description',
-        fields: [ 'description' ]
       }
     }
   }

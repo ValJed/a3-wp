@@ -2,10 +2,7 @@
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
-    label: 'Topic',
-    importExport: {
-      import: false
-    }
+    label: 'Topic'
   },
   filters: {
     add: {
