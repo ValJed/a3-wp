@@ -43,15 +43,15 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission#vue3-migration",
-    "@apostrophecms-pro/data-set": "github:apostrophecms/data-set#vue3-migration",
-    "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library#vue3-migration",
-    "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions#vue3-migration",
+    "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
+    "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
+    "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
+    "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
 
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
-    "apostrophe": "github:apostrophecms/apostrophe#vue3-migration",
+    "apostrophe": "github:apostrophecms/apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
