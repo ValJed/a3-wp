@@ -35,6 +35,7 @@ require('apostrophe')({
     article: {},
     topic: {},
     'text-widget': {},
+    'two-column-widget': {},
     'article-page': {},
     '@apostrophecms-pro/advanced-permission-group': {},
     '@apostrophecms-pro/advanced-permission': {},

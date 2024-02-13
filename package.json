@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon",
+    "dev": "APOS_DEV=1 nodemon",
     "build": "NODE_ENV=production node app @apostrophecms/asset:build",
     "serve": "NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
@@ -43,14 +43,15 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "@apostrophecms-pro/advanced-permission": "file:../advanced-permission",
-    "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
-    "@apostrophecms-pro/doc-template-library": "file:../doc-template-library",
-    "@apostrophecms-pro/document-versions": "file:../document-versions",
+    "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission#vue3-migration",
+    "@apostrophecms-pro/data-set": "github:apostrophecms/data-set#vue3-migration",
+    "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library#vue3-migration",
+    "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions#vue3-migration",
+
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
-    "apostrophe": "file:../apostrophe",
+    "apostrophe": "github:apostrophecms/apostrophe#vue3-migration",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

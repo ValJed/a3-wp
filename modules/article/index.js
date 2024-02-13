@@ -11,6 +11,23 @@ module.exports = {
   },
   fields: {
     add: {
+      /* requiredObjectField: { */
+      /*   label: 'required object', */
+      /*   type: 'object', */
+      /*   fields: { */
+      /*     add: getRequiredFields() */
+      /*   } */
+      /* }, */
+      fakeSlug: {
+        label: 'Fake slug',
+        type: 'float',
+        min: 3,
+        max: 15
+      },
+      color: {
+        label: 'Color',
+        type: 'color'
+      },
       array: {
         label: 'Array',
         type: 'array',
@@ -43,6 +60,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
+            'two-column': {},
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {},
             '@apostrophecms/video': {}
@@ -73,12 +91,15 @@ module.exports = {
     group: {
       basics: {
         fields: [
+          'fakeSlug',
+          'requiredObjectField',
           'description',
           'main',
           'image',
           'test',
           '_followed',
-          '_topics'
+          '_topics',
+          'color'
         ]
       },
       arr: {
@@ -106,7 +127,61 @@ module.exports = {
           extend: 'string',
           vueComponent: 'AposInputTest'
         });
+      },
+
+      async getSystemContext(req, { docId }) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+        return 'external';
       }
     };
   }
 };
+
+function getRequiredFields() {
+  return {
+    requiredExternalFail: {
+      label: 'required external fail',
+      type: 'string',
+      help: 'should not be required since external condition failed',
+      requiredIf: {
+        'getSystemContext()': 'internal'
+      }
+    },
+
+    requiredExternalSuccess: {
+      label: 'required external success',
+      type: 'string',
+      help: 'should be required since external condition succeeded',
+      def: 'test',
+      requiredIf: {
+        'getSystemContext()': 'external'
+      }
+    },
+
+    requireFields: {
+      label: 'require fields',
+      type: 'boolean'
+    },
+
+    requiredExternalOr: {
+      label: 'required external or',
+      type: 'string',
+      help: 'should be required if require fields is true since we use a $or operator between external condition (failure) and the boolean field',
+      requiredIf: {
+        $or: [
+          { requireFields: true },
+          { 'getSystemContext()': 'internal' }
+        ]
+      }
+    },
+    requiredExternalAnd: {
+      label: 'required external and',
+      type: 'string',
+      help: 'should be required if require fields is true since we use a and operator between external condition (success) and the boolean field',
+      requiredIf: {
+        requireFields: true,
+        'getSystemContext()': 'external'
+      }
+    }
+  };
+}
