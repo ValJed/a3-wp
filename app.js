@@ -46,6 +46,8 @@ require('apostrophe')({
     '@apostrophecms/scheduled-publishing': {},
     '@apostrophecms/redirect': {},
     '@apostrophecms/import-export': {},
-    '@apostrophecms-pro/doc-template-library': {}
+    '@apostrophecms-pro/doc-template-library': {},
+    '@apostrophecms-pro/automatic-translation': {},
+    '@apostrophecms-pro/translation-provider-deepl': {}
   }
 });

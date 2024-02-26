@@ -44,14 +44,14 @@
   "license": "MIT",
   "dependencies": {
     "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
+    "@apostrophecms-pro/automatic-translation": "file:../automatic-translation",
     "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
     "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
-
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
-    "apostrophe": "github:apostrophecms/apostrophe",
+    "apostrophe": "file:../apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
