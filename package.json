@@ -20,10 +20,10 @@
       "./views/**/*.html",
       "./src/**/*",
       "./node_modules/apostrophe/modules/@apostrophecms/**/*",
-      "./node_modules/@apostrophecms-pro/advanced-permission/index.js",
-      "./node_modules/@apostrophecms-pro/advanced-permission/lib/**/*",
-      "./node_modules/@apostrophecms-pro/advanced-permission/modules/**",
-      "./node_modules/@apostrophecms-pro/advanced-permission/ui/**"
+      "./node_modules/@apostrophecms-pro/document-versions/index.js",
+      "./node_modules/@apostrophecms-pro/document-versions/lib/**/*",
+      "./node_modules/@apostrophecms-pro/document-versions/modules/**",
+      "./node_modules/@apostrophecms-pro/document-versions/ui/**"
     ],
     "ignoreRoot": [
       ".git"
@@ -44,10 +44,10 @@
   "license": "MIT",
   "dependencies": {
     "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
-    "@apostrophecms-pro/automatic-translation": "file:../automatic-translation",
+    "@apostrophecms-pro/automatic-translation": "github:apostrophecms/automatic-translation",
     "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
-    "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
+    "@apostrophecms-pro/document-versions": "file:../document-versions",
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
