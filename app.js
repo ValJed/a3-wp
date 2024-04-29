@@ -46,44 +46,6 @@ require('apostrophe')({
     '@apostrophecms/scheduled-publishing': {},
     '@apostrophecms/redirect': {},
     '@apostrophecms/import-export': {},
-    '@apostrophecms-pro/doc-template-library': {},
-    '@apostrophecms-pro/automatic-translation': {},
-    '@apostrophecms-pro/automatic-translation-deepl': {
-      options: { apiSecret: 'toto' },
-      extendMethods(self) {
-        return {
-          async requestTranslation(_super, req, text, source, target) {
-            return text.map((t) => `${t}-${source}-${target}-translated`);
-          },
-          async getSupportedLanguages(_super, req, source, target) {
-            const supported = [ 'en', 'es', 'fr' ];
-            const sourceRespone = source?.length
-              ? source.map((code) => ({
-                code,
-                supported: supported.includes(code)
-              }))
-              : supported.map((code) => ({
-                code,
-                supported: true
-              }));
-            const targetResponse = target?.length
-              ? target.map((code) => ({
-                code,
-                supported: supported.includes(code)
-              }))
-              : supported.map((code) => ({
-                code,
-                supported: true
-              }));
-
-            return {
-              source: sourceRespone,
-              target: targetResponse
-            };
-          }
-
-        };
-      }
-    }
+    '@apostrophecms-pro/doc-template-library': {}
   }
 });
