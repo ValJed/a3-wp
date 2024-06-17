@@ -38,6 +38,7 @@ module.exports = {
             },
             '@apostrophecms/image': {},
             '@apostrophecms/video': {},
+            card: {},
             text: {}
           }
         }

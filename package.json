@@ -51,7 +51,7 @@
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
-    "apostrophe": "github:apostrophecms/apostrophe",
+    "apostrophe": "file:../apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

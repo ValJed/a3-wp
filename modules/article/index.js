@@ -11,13 +11,19 @@ module.exports = {
   },
   fields: {
     add: {
-      /* requiredObjectField: { */
-      /*   label: 'required object', */
-      /*   type: 'object', */
-      /*   fields: { */
-      /*     add: getRequiredFields() */
-      /*   } */
-      /* }, */
+      _pages: {
+        label: 'Pages',
+        type: 'relationship',
+        withType: '@apostrophecms/page',
+        max: 3,
+        required: true
+      },
+      _images: {
+        label: 'Images',
+        type: 'relationship',
+        withType: '@apostrophecms/image',
+        max: 3
+      },
       fakeSlug: {
         label: 'Fake slug',
         type: 'float',
@@ -75,6 +81,7 @@ module.exports = {
         label: 'Topics',
         type: 'relationship',
         withType: 'topic',
+        max: 2,
         fields: {
           add: {
             test: {
@@ -91,6 +98,8 @@ module.exports = {
     group: {
       basics: {
         fields: [
+          '_pages',
+          '_images',
           'fakeSlug',
           'requiredObjectField',
           'description',

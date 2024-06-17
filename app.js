@@ -2,6 +2,9 @@ require('apostrophe')({
   baseUrl: 'http://localhost:3000',
   shortName: 'a3-wp',
   modules: {
+
+    'card-widget': {},
+
     // Apostrophe module configuration
     // *******************************
     //
