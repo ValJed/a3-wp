@@ -1,7 +1,8 @@
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
-    label: 'Article'
+    label: 'Article',
+    slugPrefix: 'article-'
     /* localized: false */
 
     // Additionally add a `pluralLabel` option if needed.
@@ -11,13 +12,13 @@ module.exports = {
   },
   fields: {
     add: {
-      _pages: {
-        label: 'Pages',
-        type: 'relationship',
-        withType: '@apostrophecms/page',
-        max: 3,
-        required: true
-      },
+      /* _pages: { */
+      /*   label: 'Pages', */
+      /*   type: 'relationship', */
+      /*   withType: '@apostrophecms/page', */
+      /*   max: 3, */
+      /*   required: true */
+      /* }, */
       _images: {
         label: 'Images',
         type: 'relationship',
@@ -27,8 +28,8 @@ module.exports = {
       fakeSlug: {
         label: 'Fake slug',
         type: 'float',
-        min: 3,
-        max: 15
+        max: 15,
+        def: 0
       },
       color: {
         label: 'Color',
@@ -41,16 +42,16 @@ module.exports = {
           add: {
             toto: {
               label: 'toto',
-              type: 'string',
-              if: {
-                showToto: true
-              }
-            },
-            showToto: {
-              label: 'Require Toto',
-              type: 'boolean',
-              def: false
+              type: 'string'
+              /* if: { */
+              /*   showToto: true */
+              /* } */
             }
+            /* showToto: { */
+            /*   label: 'Require Toto', */
+            /*   type: 'boolean', */
+            /*   def: false */
+            /* } */
           }
         }
       },
@@ -77,21 +78,29 @@ module.exports = {
         type: 'attachment',
         group: 'images'
       },
+      _first: {
+        label: 'Firsts',
+        type: 'relationship',
+        withType: 'first',
+        required: false,
+        builders: {
+          project: {
+            title: 1,
+            description: 1,
+            isfirst: 1
+          }
+        }
+      },
       _topics: {
         label: 'Topics',
         type: 'relationship',
+        required: false,
         withType: 'topic',
-        max: 2,
-        fields: {
-          add: {
-            test: {
-              label: 'Test',
-              type: 'string'
-            }
+        builders: {
+          project: {
+            title: 1,
+            descritpion: 1
           }
-        },
-        requiredIf: {
-          showInfo: 2
         }
       }
     },
@@ -99,16 +108,9 @@ module.exports = {
       basics: {
         fields: [
           '_pages',
-          '_images',
-          'fakeSlug',
-          'requiredObjectField',
+          '_first',
           'description',
-          'main',
-          'image',
-          'test',
-          '_followed',
-          '_topics',
-          'color'
+          '_topics'
         ]
       },
       arr: {

@@ -28,11 +28,28 @@ module.exports = {
       description: {
         label: 'Description',
         type: 'string'
+      },
+      article: {
+        name: '_article',
+        type: 'relationship',
+        label: 'Article',
+        withType: 'article',
+        withRelationships: [ '_first' ],
+        builders: {
+          project: {
+            label: 1,
+            title: 1,
+            slug: 1,
+            _first: 1
+          }
+        },
+        min: 1,
+        max: 1
       }
     },
     group: {
       basics: {
-        fields: [ 'description' ]
+        fields: [ 'description', '_article' ]
       }
     }
   },
