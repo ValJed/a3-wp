@@ -9,11 +9,24 @@
   {{ apos.log(data.pieces[0]._second[0]._first) }}
   <h1>{{ data.page.title }}</h1>
 
-  {% for article in data.pieces %}
+  {% for third in data.pieces %}
     <article>
-      <h2>
-        <a href="{{ article._url }}">{{ article.title }}</a>
-      </h2>
+  <h2>{{ third.title }}</h2>
+      <h3>Second Relationships</h3>
+      <ul>
+        {% for second in third._second %}
+          <li>
+            {{ second.title }}
+            <h4>First Relationships</h4>
+            <ul>
+              {% for first in second._first %}
+                <li>
+                  <h4>{{ first.title }}</h4>
+                </li>
+              {% endfor %}
+          </li>
+        {% endfor %}
+      </ul>
     </article>
   {% endfor %}
 
