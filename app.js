@@ -38,11 +38,12 @@ require('apostrophe')({
     first: {},
     second: {},
     third: {},
+    'third-page': {},
     article: {},
+    'article-page': {},
     topic: {},
     'text-widget': {},
     'two-column-widget': {},
-    'article-page': {},
     '@apostrophecms-pro/advanced-permission-group': {},
     '@apostrophecms-pro/advanced-permission': {},
 

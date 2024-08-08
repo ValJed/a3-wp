@@ -1,0 +1,26 @@
+{# modules/article-page/views/index.html #}
+
+{% extends "layout.html" %}
+{% import '@apostrophecms/pager:macros.html' as pager with context %}
+
+{% block main %}
+  // HERE: relationships of relationships are available here
+  // third has _second relationships that has itself _first relationships
+  {{ apos.log(data.pieces[0]._second[0]._first) }}
+  <h1>{{ data.page.title }}</h1>
+
+  {% for article in data.pieces %}
+    <article>
+      <h2>
+        <a href="{{ article._url }}">{{ article.title }}</a>
+      </h2>
+    </article>
+  {% endfor %}
+
+  {{ pager.render({
+    page: data.currentPage,
+    total: data.totalPages,
+    class: 'blog-pager'
+  }, data.url) }}
+{% endblock %}
+

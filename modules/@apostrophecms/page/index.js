@@ -15,6 +15,10 @@ module.exports = {
       {
         name: 'article-page',
         label: 'Article Page'
+      },
+      {
+        name: 'third-page',
+        label: 'Third Page'
       }
     ]
   }
