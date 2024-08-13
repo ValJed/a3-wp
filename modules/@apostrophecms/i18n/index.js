@@ -11,6 +11,11 @@ module.exports = {
       es: {
         label: 'Spanish',
         prefix: '/es'
+      },
+
+      de: {
+        label: 'Deutch',
+        prefix: '/de'
       }
     }
   }

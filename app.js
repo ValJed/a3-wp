@@ -35,9 +35,10 @@ require('apostrophe')({
     // The project's first custom page type.
     'default-page': {},
 
-    first: {},
-    second: {},
-    third: {},
+    test: {},
+    toto: {},
+    /* second: {}, */
+    /* third: {}, */
     article: {},
     topic: {},
     'text-widget': {},

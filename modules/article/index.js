@@ -12,25 +12,12 @@ module.exports = {
   },
   fields: {
     add: {
-      /* _pages: { */
-      /*   label: 'Pages', */
+      /* _images: { */
+      /*   label: 'Images', */
       /*   type: 'relationship', */
-      /*   withType: '@apostrophecms/page', */
-      /*   max: 3, */
-      /*   required: true */
+      /*   withType: '@apostrophecms/image', */
+      /*   max: 3 */
       /* }, */
-      _images: {
-        label: 'Images',
-        type: 'relationship',
-        withType: '@apostrophecms/image',
-        max: 3
-      },
-      fakeSlug: {
-        label: 'Fake slug',
-        type: 'float',
-        max: 15,
-        def: 0
-      },
       color: {
         label: 'Color',
         type: 'color'
@@ -43,15 +30,7 @@ module.exports = {
             toto: {
               label: 'toto',
               type: 'string'
-              /* if: { */
-              /*   showToto: true */
-              /* } */
             }
-            /* showToto: { */
-            /*   label: 'Require Toto', */
-            /*   type: 'boolean', */
-            /*   def: false */
-            /* } */
           }
         }
       },
@@ -78,30 +57,17 @@ module.exports = {
         type: 'attachment',
         group: 'images'
       },
-      _first: {
-        label: 'Firsts',
-        type: 'relationship',
-        withType: 'first',
-        required: false,
-        builders: {
-          project: {
-            title: 1,
-            description: 1,
-            isfirst: 1
-          }
-        }
-      },
       _topics: {
         label: 'Topics',
         type: 'relationship',
         required: false,
-        withType: 'topic',
-        builders: {
-          project: {
-            title: 1,
-            descritpion: 1
-          }
-        }
+        withType: 'topic'
+        /* builders: { */
+        /*   project: { */
+        /*     title: 1, */
+        /*     descritpion: 1 */
+        /*   } */
+        /* } */
       }
     },
     group: {
@@ -110,7 +76,9 @@ module.exports = {
           '_pages',
           '_first',
           'description',
-          '_topics'
+          '_topics',
+          'main',
+          'image'
         ]
       },
       arr: {

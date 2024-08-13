@@ -33,18 +33,15 @@ module.exports = {
         name: '_article',
         type: 'relationship',
         label: 'Article',
-        withType: 'article',
-        withRelationships: [ '_first' ],
-        builders: {
-          project: {
-            label: 1,
-            title: 1,
-            slug: 1,
-            _first: 1
-          }
-        },
-        min: 1,
-        max: 1
+        withType: 'article'
+        /* builders: { */
+        /*   project: { */
+        /*     label: 1, */
+        /*     title: 1, */
+        /*     slug: 1, */
+        /*     _first: 1 */
+        /*   } */
+        /* } */
       }
     },
     group: {
