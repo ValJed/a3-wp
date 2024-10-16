@@ -39,7 +39,8 @@ module.exports = {
             '@apostrophecms/image': {},
             '@apostrophecms/video': {},
             card: {},
-            text: {}
+            text: {},
+            go7: {}
           }
         }
       },

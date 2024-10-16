@@ -2,19 +2,6 @@ require('apostrophe')({
   baseUrl: 'http://localhost:3000',
   shortName: 'a3-wp',
   modules: {
-
-    'card-widget': {},
-
-    // Apostrophe module configuration
-    // *******************************
-    //
-    // NOTE: most configuration occurs in the respective modules' directories.
-    // See modules/@apostrophecms/page/index.js for an example.
-    //
-    // Any modules that are not present by default in Apostrophe must at least
-    // have a minimal configuration here to turn them on: `moduleName: {}`
-    // ***********************************************************************
-    // `className` options set custom CSS classes for Apostrophe core widgets.
     '@apostrophecms/rich-text-widget': {
       options: {
         className: 'bp-rich-text'
@@ -35,13 +22,9 @@ require('apostrophe')({
     // The project's first custom page type.
     'default-page': {},
 
-    test: {},
-    toto: {},
-    /* second: {}, */
-    /* third: {}, */
     article: {},
     topic: {},
-    'text-widget': {},
+    'go7-widget': {},
     'two-column-widget': {},
     'article-page': {},
     '@apostrophecms-pro/advanced-permission-group': {},

@@ -1,6 +1,7 @@
 {
   "extends": [
-    "apostrophe"
+    "apostrophe",
+    "plugin:react/recommended"
   ],
   "globals": {
     "apos": true

@@ -41,7 +41,8 @@ module.exports = {
             '@apostrophecms/video': {},
             '@apostrophecms-pro/data-set': {},
             'two-column': {},
-            card: {}
+            card: {},
+            go7: {}
           }
         }
       }

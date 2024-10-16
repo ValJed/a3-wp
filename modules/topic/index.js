@@ -42,11 +42,16 @@ module.exports = {
         /*     _first: 1 */
         /*   } */
         /* } */
+      },
+      _page: {
+        label: 'Page',
+        type: 'relationship',
+        withType: '@apostrophecms/any-page-type'
       }
     },
     group: {
       basics: {
-        fields: [ 'description', '_article' ]
+        fields: [ 'description', '_article', '_page' ]
       }
     }
   },
