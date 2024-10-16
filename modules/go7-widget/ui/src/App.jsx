@@ -1,19 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import SelectPassenger from './SelectPassenger';
+import SeatLegend from './SeatLegend';
+import Seats from './Seats';
 
 // The vh unit allows to take 100% of the view height with pure css.
 const Container = styled.div`
+  display: flex;
+  flex-direction: row;
   background-color: #f0f0f0;
   height: 100vh;
 `;
 
-const Title = styled.h1`
-  margin: 0;
-  padding: 1rem;
+const LeftBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 50%;
 `;
 
-const Paragraph = styled.p`
-  text-align: center;
+const RightBlock = styled.div`
+  width: 50%;
 `;
 
 function App() {
@@ -25,8 +32,13 @@ function App() {
 
   return (
     <Container>
-      <Title>Hello, world!</Title>
-      <Paragraph>This is a React component taking 100% of the view height.</Paragraph>
+      <LeftBlock className='left'>
+        <SelectPassenger />
+        <SeatLegend />
+      </LeftBlock>
+      <RightBlock className='right'>
+        <Seats />
+      </RightBlock>
     </Container>
   );
 };
