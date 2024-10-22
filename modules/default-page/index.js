@@ -1,7 +1,13 @@
 module.exports = {
   extend: '@apostrophecms/page-type',
   options: {
-    label: 'Default Page'
+    label: 'Default Page',
+    publicApiProjection: {
+      title: 1,
+      description: 1,
+      main: 1,
+      _url: 1
+    }
   },
   fields: {
     add: {
@@ -38,9 +44,7 @@ module.exports = {
             },
             '@apostrophecms/image': {},
             '@apostrophecms/video': {},
-            card: {},
-            text: {},
-            go7: {}
+            random: {}
           }
         }
       },
@@ -51,7 +55,14 @@ module.exports = {
       _articles: {
         label: 'Articles',
         type: 'relationship',
-        withType: 'article'
+        withType: 'article',
+        /* withRelationships: [ '_topics' ] */
+        builders: {
+          project: {
+            title: 1,
+            description: 1
+          }
+        }
       }
     },
     group: {

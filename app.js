@@ -23,10 +23,10 @@ require('apostrophe')({
     'default-page': {},
 
     article: {},
-    topic: {},
-    'go7-widget': {},
-    'two-column-widget': {},
     'article-page': {},
+    topic: {},
+    'random-widget': {},
+    'two-column-widget': {},
     '@apostrophecms-pro/advanced-permission-group': {},
     '@apostrophecms-pro/advanced-permission': {},
 

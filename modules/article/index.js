@@ -54,14 +54,8 @@ module.exports = {
       _topics: {
         label: 'Topics',
         type: 'relationship',
-        required: false,
-        withType: 'topic'
-        /* builders: { */
-        /*   project: { */
-        /*     title: 1, */
-        /*     descritpion: 1 */
-        /*   } */
-        /* } */
+        withType: 'topic',
+        required: false
       }
     },
     group: {
