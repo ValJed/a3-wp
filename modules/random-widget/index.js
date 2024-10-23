@@ -12,7 +12,7 @@ module.exports = {
         label: 'Rel page',
         type: 'relationship',
         withType: 'default-page',
-        withRelationships: true,
+        withRelationships: [ '_articles._topics' ],
         builders: {
           project: {
             title: 1,

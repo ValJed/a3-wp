@@ -56,7 +56,7 @@ module.exports = {
         label: 'Articles',
         type: 'relationship',
         withType: 'article',
-        /* withRelationships: [ '_topics' ] */
+        withRelationships: [ '_topics' ],
         builders: {
           project: {
             title: 1,
