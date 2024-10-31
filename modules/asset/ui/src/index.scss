@@ -6,3 +6,14 @@
 @import './scss/_layout';
 @import './scss/_welcome';
 @import './scss/_widgets';
+
+@media (max-width: 900px) {
+  .bp-wrapper {
+    background-color: red;
+    width: 50vw;
+  }
+
+  .bp-header {
+    background-color: blue;
+  }
+}
