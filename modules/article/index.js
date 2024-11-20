@@ -19,8 +19,13 @@ module.exports = {
       array: {
         label: 'Array',
         type: 'array',
+        inline: true,
         fields: {
           add: {
+            themeColor: {
+              type: 'color',
+              label: 'Theme color'
+            },
             toto: {
               label: 'toto',
               type: 'string'
@@ -61,6 +66,7 @@ module.exports = {
     group: {
       basics: {
         fields: [
+          'color',
           '_pages',
           '_first',
           'description',

@@ -2,6 +2,12 @@ require('apostrophe')({
   baseUrl: 'http://localhost:3000',
   shortName: 'a3-wp',
   modules: {
+    '@apostrophecms/vite': {},
+    '@apostrophecms/asset': {
+      options: {
+        hmr: 'apos'
+      }
+    },
     '@apostrophecms/rich-text-widget': {
       options: {
         className: 'bp-rich-text'
