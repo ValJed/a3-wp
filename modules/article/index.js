@@ -1,3 +1,4 @@
+const linkSchema = require('./linkSchema');
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
@@ -6,86 +7,87 @@ module.exports = {
   },
   fields: {
     add: {
-      /* _images: { */
-      /*   label: 'Images', */
-      /*   type: 'relationship', */
-      /*   withType: '@apostrophecms/image', */
-      /*   max: 3 */
-      /* }, */
-      color: {
-        label: 'Color',
-        type: 'color'
-      },
-      array: {
-        label: 'Array',
+      buttons: {
         type: 'array',
-        inline: true,
+        max: 2,
         fields: {
-          add: {
-            themeColor: {
-              type: 'color',
-              label: 'Theme color'
-            },
-            toto: {
-              label: 'toto',
-              type: 'string'
-            }
-          }
+          add: linkSchema(true)
         }
       },
-
-      description: {
-        label: 'Description',
-        type: 'string',
-        required: true
+      showChoices: {
+        label: 'Show Choices',
+        type: 'boolean',
+        def: false
       },
-
-      main: {
-        label: 'Main',
-        type: 'area',
-        options: {
-          widgets: {
-            'two-column': {},
-            '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {},
-            '@apostrophecms/video': {}
-          }
+      choices: {
+        label: 'Choices',
+        type: 'select',
+        choices: 'getChoices'
+      },
+      dark: {
+        label: 'Dark',
+        type: 'url',
+        required: true,
+        if: {
+          choices: 'dark'
         }
       },
-      image: {
-        type: 'attachment',
-        group: 'images'
+      light: {
+        label: 'Light',
+        type: 'url',
+        required: true,
+        if: {
+          choices: 'light'
+        }
       },
-      _topics: {
-        label: 'Topics',
-        type: 'relationship',
-        withType: 'topic',
-        required: false
+      dusk: {
+        label: 'Dusk',
+        type: 'url',
+        required: true,
+        if: {
+          choices: 'dusk'
+        }
       }
     },
     group: {
       basics: {
         fields: [
-          'color',
-          '_pages',
-          '_first',
-          'description',
-          '_topics',
-          'main',
-          'image'
+          'buttons',
+          'showChoices',
+          'choices',
+          'dark',
+          'light',
+          'dusk'
         ]
-      },
-      arr: {
-        label: 'Array',
-        fields: [
-          'array',
-          'arrayInline'
-        ]
-      },
-      object: {
-        label: 'Object',
-        fields: [ 'object' ]
       }
     }
+  },
+  methods(self) {
+    return {
+      async getChoices() {
+        await wait();
+
+        return [
+          {
+            label: 'Dark 🌚',
+            value: 'dark'
+          },
+          {
+            label: 'Light 💡',
+            value: 'light'
+          },
+          {
+            label: 'Dusk 🌆',
+            value: 'dusk'
+          }
+        ];
+      }
+    };
   }
 };
+
+function wait(time = 500) {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, time);
+  });
+}
