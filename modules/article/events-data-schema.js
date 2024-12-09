@@ -49,3 +49,4 @@ const eventTrackingFields = {
 };
 
 module.exports = eventTrackingFields;
+

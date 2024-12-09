@@ -1,4 +1,5 @@
-const linkSchema = require('./linkSchema');
+const linkSchema = require('./link-schema');
+
 module.exports = {
   extend: '@apostrophecms/piece-type',
   options: {
@@ -11,7 +12,7 @@ module.exports = {
         type: 'array',
         max: 2,
         fields: {
-          add: linkSchema(true)
+          add: linkSchema()
         }
       },
       showChoices: {
@@ -19,11 +20,11 @@ module.exports = {
         type: 'boolean',
         def: false
       },
-      choices: {
-        label: 'Choices',
-        type: 'select',
-        choices: 'getChoices'
-      },
+      /* choices: { */
+      /*   label: 'Choices', */
+      /*   type: 'select', */
+      /*   choices: 'getChoices' */
+      /* }, */
       dark: {
         label: 'Dark',
         type: 'url',
@@ -54,7 +55,7 @@ module.exports = {
         fields: [
           'buttons',
           'showChoices',
-          'choices',
+          /* 'choices', */
           'dark',
           'light',
           'dusk'
@@ -86,7 +87,7 @@ module.exports = {
   }
 };
 
-function wait(time = 500) {
+function wait(time = 2000) {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, time);
   });

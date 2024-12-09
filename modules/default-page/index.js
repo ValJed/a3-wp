@@ -1,3 +1,5 @@
+const linkSchema = require('./link-schema');
+
 module.exports = {
   extend: '@apostrophecms/page-type',
   options: {
@@ -11,6 +13,14 @@ module.exports = {
   },
   fields: {
     add: {
+
+      buttons: {
+        type: 'array',
+        max: 2,
+        fields: {
+          add: linkSchema()
+        }
+      },
       main: {
         type: 'area',
         options: {
@@ -69,6 +79,7 @@ module.exports = {
       basics: {
         label: 'Basics',
         fields: [
+          'buttons',
           'title',
           'main',
           '_articles',

@@ -1,20 +1,8 @@
-// The link schema will always be added into an array within a widget, piece or page schema like so:
-/*
-buttons: {
-  type: 'array',
-  max: 2,
-  fields: {
-    add: linkSchema
-  }
-}
+const eventTrackingFields = require('./events-data-schema.js');
 
-Even if you require only one link, just adjust the max property to 1.
-*/
-
-const eventTrackingFields = require('./eventTrackingFields');
-
-module.exports = function (linkStyle = true) {
-
+module.exports = (
+  linkStyle = true
+) => {
   const linkSchema = {
     linkLabel: {
       label: 'Link label',
@@ -136,7 +124,7 @@ module.exports = function (linkStyle = true) {
   linkSchema._fundType = {
     label: 'Fund type',
     type: 'relationship',
-    withType: 'topic',
+    withType: '@apostrophecms/page',
     max: 1,
     required: true,
     builders: {
@@ -153,7 +141,7 @@ module.exports = function (linkStyle = true) {
   linkSchema._insight = {
     label: 'Insight',
     type: 'relationship',
-    withType: 'topic',
+    withType: '@apostrophecms/page',
     max: 1,
     required: true,
     builders: {
@@ -197,7 +185,7 @@ module.exports = function (linkStyle = true) {
   linkSchema._modal = {
     label: 'Modal',
     type: 'relationship',
-    withType: 'topic',
+    withType: '@apostrophecms/page',
     required: true,
     max: 1,
     if: {
