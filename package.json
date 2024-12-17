@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "dev": "APOS_DEV=1 nodemon",
+    "dev": "nodemon",
     "build": "NODE_ENV=production node app @apostrophecms/asset:build",
     "serve": "NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
@@ -20,10 +20,9 @@
       "./views/**/*.html",
       "./src/**/*",
       "./node_modules/apostrophe/modules/@apostrophecms/**/*",
-      "./node_modules/@apostrophecms/import-export/index.js",
-      "./node_modules/@apostrophecms/import-export/lib/**/*",
-      "./node_modules/@apostrophecms/import-export/modules/**",
-      "./node_modules/@apostrophecms/import-export/ui/**"
+      "./node_modules/@apostrophecms-pro/palette/index.js",
+      "./node_modules/@apostrophecms-pro/palette/lib/**",
+      "./node_modules/@apostrophecms-pro/palette/modules/**"
     ],
     "ignoreRoot": [
       ".git"
@@ -48,6 +47,7 @@
     "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
     "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
+    "@apostrophecms-pro/palette": "^4.3.2",
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",

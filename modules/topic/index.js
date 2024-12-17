@@ -29,29 +29,32 @@ module.exports = {
         label: 'Description',
         type: 'string'
       },
-      article: {
-        name: '_article',
-        type: 'relationship',
-        label: 'Article',
-        withType: 'article'
-        /* builders: { */
-        /*   project: { */
-        /*     label: 1, */
-        /*     title: 1, */
-        /*     slug: 1, */
-        /*     _first: 1 */
-        /*   } */
-        /* } */
-      },
       _page: {
         label: 'Page',
         type: 'relationship',
-        withType: '@apostrophecms/any-page-type'
+        withType: '@apostrophecms/any-page-type',
+        fields: {
+          add: {
+            title: {
+              label: 'Title',
+              type: 'string',
+              required: true,
+              if: {
+                showTitle: true
+              }
+            },
+            showTitle: {
+              label: 'Show title',
+              type: 'boolean',
+              def: false
+            }
+          }
+        }
       }
     },
     group: {
       basics: {
-        fields: [ 'description', '_article', '_page' ]
+        fields: [ 'description', '_page' ]
       }
     }
   },

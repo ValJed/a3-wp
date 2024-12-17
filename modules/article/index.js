@@ -6,16 +6,6 @@ module.exports = {
   },
   fields: {
     add: {
-      /* _images: { */
-      /*   label: 'Images', */
-      /*   type: 'relationship', */
-      /*   withType: '@apostrophecms/image', */
-      /*   max: 3 */
-      /* }, */
-      color: {
-        label: 'Color',
-        type: 'color'
-      },
       array: {
         label: 'Array',
         type: 'array',
@@ -33,7 +23,6 @@ module.exports = {
           }
         }
       },
-
       description: {
         label: 'Description',
         type: 'string',
