@@ -20,9 +20,9 @@
       "./views/**/*.html",
       "./src/**/*",
       "./node_modules/apostrophe/modules/@apostrophecms/**/*",
-      "./node_modules/@apostrophecms-pro/palette/index.js",
-      "./node_modules/@apostrophecms-pro/palette/lib/**",
-      "./node_modules/@apostrophecms-pro/palette/modules/**"
+      "./node_modules/@apostrophecms-pro/doc-template-library/index.js",
+      "./node_modules/@apostrophecms-pro/doc-template-library/lib/**",
+      "./node_modules/@apostrophecms-pro/doc-template-library/modules/**"
     ],
     "ignoreRoot": [
       ".git"

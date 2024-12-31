@@ -6,3 +6,9 @@
 @import './scss/_layout';
 @import './scss/_welcome';
 @import './scss/_widgets';
+
+.random-widget {
+  background-color: red;
+  width: 50vw;
+  margin: 0 auto;
+}

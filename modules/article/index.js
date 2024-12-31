@@ -19,6 +19,26 @@ module.exports = {
             toto: {
               label: 'toto',
               type: 'string'
+            },
+            arrayObject: {
+              label: 'arr obj',
+              type: 'object',
+              fields: {
+                add: {
+                  arrayObjectString: {
+                    label: 'arr obj str',
+                    type: 'string',
+                    required: true,
+                    if: {
+                      showStr: true
+                    }
+                  },
+                  showStr: {
+                    label: 'Show Str',
+                    type: 'boolean'
+                  }
+                }
+              }
             }
           }
         }
