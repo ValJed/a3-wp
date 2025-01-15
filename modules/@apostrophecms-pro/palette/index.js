@@ -5,7 +5,7 @@ module.exports = {
         type: 'color',
         label: 'Title Color',
         help: 'Choose a color for the title',
-        selector: ':root h3',
+        selector: ':root h4',
         property: 'color'
       },
       textColor: {
@@ -48,14 +48,6 @@ module.exports = {
         unit: 'px',
         property: 'font-size',
         selector: '.palette-playground'
-      },
-      fontFamily: {
-        label: 'Font Family',
-        type: 'select',
-        selector: '.palette-playground',
-        property: 'font-family',
-        help: 'Fonts defined in global',
-        choices: 'getFontFamilyChoices'
       },
       borderStyle: {
         type: 'select',
@@ -256,7 +248,41 @@ module.exports = {
       },
       typography: {
         label: 'Typography',
-        fields: [ 'textDecoration', 'fontSize', 'fontFamily' ]
+        group: {
+          text: {
+            label: 'Text',
+            fields: [ 'textDecoration' ]
+          },
+          font: {
+            label: 'Fonts',
+            fields: [ 'fontSize', 'fontFamily' ]
+          },
+          text2: {
+            label: 'Text',
+            fields: [ 'textDecoration' ]
+          },
+          font4: {
+            label: 'Fonts',
+            fields: [ 'fontSize', 'fontFamily' ]
+          },
+          text8: {
+            label: 'Text',
+            fields: [ 'textDecoration' ]
+          },
+          font7: {
+            label: 'Fonts',
+            fields: [ 'fontSize', 'fontFamily' ]
+          },
+          text3: {
+            label: 'Text',
+            fields: [ 'textDecoration' ]
+          },
+          font5: {
+            label: 'Fonts',
+            fields: [ 'fontSize', 'fontFamily' ]
+          }
+
+        }
       },
       miscellaneous: {
         label: 'Miscellaneous',
@@ -279,6 +305,120 @@ module.exports = {
       mediaQueries: {
         label: 'Media Queries',
         fields: [ 'float', 'opacity' ]
+      },
+
+      test1: {
+        label: 'Test 1',
+        group: {
+          border: {
+            label: 'Border',
+            fields: [ 'borderStyle', 'borderWidth', 'borderColor', 'borderRadius' ]
+          },
+          margin: {
+            label: 'Margin',
+            fields: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ]
+          },
+          padding: {
+            label: 'Padding',
+            fields: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ]
+          }
+        },
+        fields: [ 'shadow', 'rotation', 'blur' ]
+      },
+
+      test2: {
+        label: 'Test 2',
+        group: {
+          border: {
+            label: 'Border',
+            fields: [ 'borderStyle', 'borderWidth', 'borderColor', 'borderRadius' ]
+          },
+          margin: {
+            label: 'Margin',
+            fields: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ]
+          },
+          padding: {
+            label: 'Padding',
+            fields: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ]
+          }
+        },
+        fields: [ 'shadow', 'rotation', 'blur' ]
+      },
+
+      test3: {
+        label: 'Test 3',
+        group: {
+          border: {
+            label: 'Border',
+            fields: [ 'borderStyle', 'borderWidth', 'borderColor', 'borderRadius' ]
+          },
+          margin: {
+            label: 'Margin',
+            fields: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ]
+          },
+          padding: {
+            label: 'Padding',
+            fields: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ]
+          }
+        },
+        fields: [ 'shadow', 'rotation', 'blur' ]
+      },
+
+      test4: {
+        label: 'Test 3',
+        group: {
+          border: {
+            label: 'Border',
+            fields: [ 'borderStyle', 'borderWidth', 'borderColor', 'borderRadius' ]
+          },
+          margin: {
+            label: 'Margin',
+            fields: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ]
+          },
+          padding: {
+            label: 'Padding',
+            fields: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ]
+          }
+        },
+        fields: [ 'shadow', 'rotation', 'blur' ]
+      },
+
+      test5: {
+        label: 'Test 3',
+        group: {
+          border: {
+            label: 'Border',
+            fields: [ 'borderStyle', 'borderWidth', 'borderColor', 'borderRadius' ]
+          },
+          margin: {
+            label: 'Margin',
+            fields: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ]
+          },
+          padding: {
+            label: 'Padding',
+            fields: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ]
+          }
+        },
+        fields: [ 'shadow', 'rotation', 'blur' ]
+      },
+
+      test6: {
+        label: 'Test 3',
+        group: {
+          border: {
+            label: 'Border',
+            fields: [ 'borderStyle', 'borderWidth', 'borderColor', 'borderRadius' ]
+          },
+          margin: {
+            label: 'Margin',
+            fields: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ]
+          },
+          padding: {
+            label: 'Padding',
+            fields: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ]
+          }
+        },
+        fields: [ 'shadow', 'rotation', 'blur' ]
       }
     }
   }

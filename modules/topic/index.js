@@ -25,36 +25,47 @@ module.exports = {
   },
   fields: {
     add: {
+      range: {
+        label: 'Range',
+        type: 'range',
+        min: 1,
+        max: 40
+      },
+      color: {
+        label: 'Color',
+        type: 'color'
+      },
       description: {
         label: 'Description',
         type: 'string'
-      },
-      _page: {
-        label: 'Page',
-        type: 'relationship',
-        withType: '@apostrophecms/any-page-type',
-        fields: {
-          add: {
-            title: {
-              label: 'Title',
-              type: 'string',
-              required: true,
-              if: {
-                showTitle: true
-              }
-            },
-            showTitle: {
-              label: 'Show title',
-              type: 'boolean',
-              def: false
-            }
-          }
-        }
       }
+      /* _page: { */
+      /*   label: 'Page', */
+      /*   type: 'relationship', */
+      /*   withType: '@apostrophecms/any-page-type', */
+      /*   fields: { */
+      /*     add: { */
+      /*       title: { */
+      /*         label: 'Title', */
+      /*         type: 'string', */
+      /*         required: true, */
+      /*         if: { */
+      /*           showTitle: true */
+      /*         } */
+      /*       }, */
+      /*       showTitle: { */
+      /*         label: 'Show title', */
+      /*         type: 'boolean', */
+      /*         def: false */
+      /*       } */
+      /*     } */
+      /*   } */
+      /* } */
     },
     group: {
       basics: {
-        fields: [ 'description', '_page' ]
+        label: 'Basics',
+        fields: [ 'description', 'color' /* '_page' */ ]
       }
     }
   },

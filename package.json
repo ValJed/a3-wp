@@ -19,10 +19,10 @@
       "./lib/**/*.js",
       "./views/**/*.html",
       "./src/**/*",
-      "./node_modules/apostrophe/modules/@apostrophecms/**/*",
-      "./node_modules/@apostrophecms-pro/doc-template-library/index.js",
-      "./node_modules/@apostrophecms-pro/doc-template-library/lib/**",
-      "./node_modules/@apostrophecms-pro/doc-template-library/modules/**"
+      "./node_modules/apostrophe/modules/@apostrophecms/**/*.js",
+      "./node_modules/@apostrophecms-pro/palette/index.js",
+      "./node_modules/@apostrophecms-pro/palette/lib/**",
+      "./node_modules/@apostrophecms-pro/palette/modules/**"
     ],
     "ignoreRoot": [
       ".git"
@@ -45,18 +45,13 @@
     "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
     "@apostrophecms-pro/automatic-translation": "github:apostrophecms/automatic-translation",
     "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
-    "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
     "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
     "@apostrophecms-pro/palette": "^4.3.2",
-    "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
     "@apostrophecms/vite": "github:apostrophecms/vite",
     "apostrophe": "github:apostrophecms/apostrophe",
-    "normalize.css": "^8.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "styled-components": "^6.1.13"
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.25.7",
@@ -68,3 +63,4 @@
     "nodemon": "^2.0.7"
   }
 }
+
