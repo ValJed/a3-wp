@@ -7,6 +7,7 @@ module.exports = {
       main: {
         type: 'area',
         options: {
+          expanded: true,
           widgets: {
             '@apostrophecms/rich-text': {
               toolbar: [
@@ -20,7 +21,13 @@ module.exports = {
                 '|',
                 'image',
                 'bulletList',
-                'orderedList'
+                'table'
+                /* 'importTable' */
+              ],
+              insert: [
+                'image',
+                'table'
+                /* 'importTable' */
               ],
               styles: [
                 {
@@ -37,7 +44,9 @@ module.exports = {
                 }
               ]
             },
-            '@apostrophecms/image': {},
+            '@apostrophecms/image': {
+              minSize: [ 3000, 600 ]
+            },
             '@apostrophecms/video': {},
             '@apostrophecms-pro/data-set': {},
             'two-column': {},

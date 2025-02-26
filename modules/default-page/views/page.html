@@ -3,12 +3,9 @@
   that lives in the top-level views/ folder for convenience
 #}
 {% extends "layout.html" %}
-
-{{ apos.log(data.page._articles) }}
-
 {% block main %}
-  <section class="bp-content">
-    <h1>{{ data.page.title }}</h1>
-    {% area data.page, 'main' %}
-  </section>
+    <section class="bp-content">
+        <h1>{{ data.page.title }}</h1>
+        {% area data.page, 'main' %}
+    </section>
 {% endblock %}
