@@ -10,7 +10,8 @@ require('apostrophe')({
     },
     '@apostrophecms/rich-text-widget': {
       options: {
-        className: 'bp-rich-text'
+        className: 'bp-rich-text',
+        linkWithType: [ '@apostrophecms/any-page-type', 'article' ]
       }
     },
     '@apostrophecms/image-widget': {

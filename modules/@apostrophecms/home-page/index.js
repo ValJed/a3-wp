@@ -21,13 +21,14 @@ module.exports = {
                 '|',
                 'image',
                 'bulletList',
-                'table'
-                /* 'importTable' */
+                'table',
+                'importTable'
               ],
               insert: [
                 'image',
-                'table'
-                /* 'importTable' */
+                'table',
+                'horizontalRule',
+                'importTable'
               ],
               styles: [
                 {
@@ -41,6 +42,14 @@ module.exports = {
                 {
                   tag: 'h4',
                   label: 'Heading 4 (H4)'
+                },
+                {
+                  tag: 'b',
+                  label: 'B'
+                },
+                {
+                  tag: 'strong',
+                  label: 'Strong'
                 }
               ]
             },
