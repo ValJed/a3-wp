@@ -7,7 +7,7 @@ module.exports = {
       main: {
         type: 'area',
         options: {
-          expanded: true,
+          /* expanded: true, */
           widgets: {
             '@apostrophecms/rich-text': {
               toolbar: [
@@ -22,7 +22,8 @@ module.exports = {
                 'image',
                 'bulletList',
                 'table',
-                'importTable'
+                'importTable',
+                'color'
               ],
               insert: [
                 'image',
