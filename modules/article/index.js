@@ -9,7 +9,6 @@ module.exports = {
       array: {
         label: 'Array',
         type: 'array',
-        inline: true,
         fields: {
           add: {
             themeColor: {
@@ -43,6 +42,12 @@ module.exports = {
           }
         }
       },
+      _pages: {
+        label: 'Page',
+        type: 'relationship',
+        withType: '@apostrophecms/page',
+        required: false
+      },
       description: {
         label: 'Description',
         type: 'string',
@@ -55,7 +60,9 @@ module.exports = {
         options: {
           widgets: {
             'two-column': {},
-            '@apostrophecms/rich-text': {},
+            '@apostrophecms/rich-text': {
+              insert: [ 'table', 'importTable', 'image', 'horizontalRule' ]
+            },
             '@apostrophecms/image': {},
             '@apostrophecms/video': {}
           }
