@@ -2,10 +2,41 @@ require('apostrophe')({
   baseUrl: 'http://localhost:3000',
   shortName: 'a3-wp',
   modules: {
-    '@apostrophecms/vite': {},
-    '@apostrophecms/asset': {
+    '@apostrophecms/vite': {
       options: {
         hmr: 'apos'
+      }
+    },
+    '@apostrophecms/asset': {
+      options: {
+        hmr: 'apos',
+        breakpointPreviewMode: {
+          enable: true,
+          debug: false,
+          screens: {
+            desktop: {
+              label: 'apostrophe:breakpointPreviewDesktop',
+              width: '1440px',
+              height: '900px',
+              icon: 'monitor-icon',
+              shortcut: true
+            },
+            tablet: {
+              label: 'apostrophe:breakpointPreviewTablet',
+              width: '1024px',
+              height: '768px',
+              icon: 'tablet-icon',
+              shortcut: true
+            },
+            mobile: {
+              label: 'apostrophe:breakpointPreviewMobile',
+              width: '414px',
+              height: '896px',
+              icon: 'cellphone-icon',
+              shortcut: true
+            }
+          }
+        }
       }
     },
     '@apostrophecms/rich-text-widget': {
@@ -85,4 +116,3 @@ require('apostrophe')({
     }
   }
 });
-

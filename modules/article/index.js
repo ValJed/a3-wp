@@ -4,6 +4,17 @@ module.exports = {
     label: 'Article',
     slugPrefix: 'article-'
   },
+  filters: {
+    add: {
+      /* foo: { */
+      /*   label: 'Foo', */
+      /*   choices: 'getChoices()' */
+      /* }, */
+      _topics: {
+        label: 'Topics'
+      }
+    }
+  },
   fields: {
     add: {
       array: {
@@ -46,7 +57,19 @@ module.exports = {
         label: 'Page',
         type: 'relationship',
         withType: '@apostrophecms/page',
-        required: false
+        required: false,
+        fields: {
+          add: {
+            test1: {
+              type: 'string',
+              label: 'Test 1'
+            },
+            test2: {
+              type: 'string',
+              label: 'Test 2'
+            }
+          }
+        }
       },
       description: {
         label: 'Description',
@@ -77,6 +100,11 @@ module.exports = {
         type: 'relationship',
         withType: 'topic',
         required: false
+      },
+      select: {
+        label: 'Select',
+        type: 'select',
+        choices: 'getChoices()'
       }
     },
     group: {
@@ -88,7 +116,8 @@ module.exports = {
           'description',
           '_topics',
           'main',
-          'image'
+          'image',
+          'select'
         ]
       },
       arr: {
@@ -103,5 +132,25 @@ module.exports = {
         fields: [ 'object' ]
       }
     }
+  },
+  methods(self) {
+    return {
+      getChoices(req, first, ctx) {
+        return [
+          {
+            label: 'Choice 1',
+            value: 'choice1'
+          },
+          {
+            label: 'Choice 2',
+            value: 'choice2'
+          },
+          {
+            label: 'Choice 3',
+            value: 'choice3'
+          }
+        ];
+      }
+    };
   }
 };

@@ -17,5 +17,42 @@ module.exports = {
         label: 'Article Page'
       }
     ]
+  },
+  filters: {
+    add: {
+      foo: {
+        label: 'Foo',
+        choices: [
+          {
+            value: 'foo',
+            label: 'Foo'
+          },
+          {
+            value: 'bar',
+            label: 'Bar'
+          }
+        ]
+      }
+    }
+  },
+  methods(self) {
+    return {
+      getChoices() {
+        return [
+          {
+            value: 'foo',
+            label: 'Foo'
+          },
+          {
+            value: 'bar',
+            label: 'Bar'
+          },
+          {
+            value: 'baz',
+            label: 'Baz'
+          }
+        ];
+      }
+    };
   }
 };

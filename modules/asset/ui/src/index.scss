@@ -7,12 +7,23 @@
 @import './scss/_welcome';
 @import './scss/_widgets';
 
-.random-widget {
-  background-color: red;
-  width: 50vw;
-  margin: 0 auto;
-}
-
 img {
   max-width: 100%;
 }
+
+body {
+  margin: 0;
+  font-family: 
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    'Helvetica',
+    'Arial',
+    sans-serif;
+}
+

@@ -1,9 +1,5 @@
 module.exports = {
   options: {
-    defaultOptions: {
-      toolbar: [ 'styles', 'bold', 'color', 'image' ],
-      insert: [ 'image' ]
-    },
     imageStyles: [
       {
         value: 'image-float-left',

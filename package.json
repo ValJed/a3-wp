@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon --inspect",
+    "dev": "nodemon",
     "build": "NODE_ENV=production node app @apostrophecms/asset:build",
     "serve": "NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
@@ -47,7 +47,8 @@
     "@apostrophecms-pro/data-set": "github:apostrophecms/data-set",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
     "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
-    "@apostrophecms-pro/palette": "^4.3.2",
+    "@apostrophecms-pro/palette": "github:apostrophecms/palette",
+    "@apostrophecms/form": "^1.4.2",
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
