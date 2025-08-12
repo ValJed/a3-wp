@@ -60,6 +60,7 @@ require('apostrophe')({
     // The project's first custom page type.
     'default-page': {},
 
+    'img-with-placeholder-widget': {},
     article: {},
     'article-page': {},
     topic: {},

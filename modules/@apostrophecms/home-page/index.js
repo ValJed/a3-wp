@@ -17,7 +17,8 @@ module.exports = {
             '@apostrophecms-pro/data-set': {},
             'two-column': {},
             random: {},
-            '@apostrophecms/form': {}
+            '@apostrophecms/form': {},
+            'img-with-placeholder': {}
           }
         }
       },
@@ -34,7 +35,8 @@ module.exports = {
             '@apostrophecms-pro/data-set': {},
             'two-column': {},
             random: {},
-            '@apostrophecms/form': {}
+            '@apostrophecms/form': {},
+            'img-with-placeholder': {}
           }
         }
       }
