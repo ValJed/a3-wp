@@ -25,6 +25,31 @@ module.exports = {
   },
   fields: {
     add: {
+      orderReady: {
+        label: 'I am ready to order?',
+        type: 'boolean'
+      },
+      hasCoupon: {
+        label: 'I have a coupon',
+        type: 'boolean',
+        if: {
+          orderReady: true
+        }
+      },
+      coupon: {
+        label: 'Coupon',
+        type: 'string',
+        help: 'Enter a coupon. On the 10th order, write "ORDER10" to get a discount!',
+        required: true,
+        if: {
+          orderReady: true,
+          // leave $or condition above others to check that they will run after it
+          $or: [
+            { hasCoupon: true },
+            { 'getOrdersCount()': 10 }
+          ]
+        }
+      },
       range: {
         label: 'Range',
         type: 'range',
@@ -39,38 +64,25 @@ module.exports = {
         label: 'Description',
         type: 'string'
       }
-      /* _page: { */
-      /*   label: 'Page', */
-      /*   type: 'relationship', */
-      /*   withType: '@apostrophecms/any-page-type', */
-      /*   fields: { */
-      /*     add: { */
-      /*       title: { */
-      /*         label: 'Title', */
-      /*         type: 'string', */
-      /*         required: true, */
-      /*         if: { */
-      /*           showTitle: true */
-      /*         } */
-      /*       }, */
-      /*       showTitle: { */
-      /*         label: 'Show title', */
-      /*         type: 'boolean', */
-      /*         def: false */
-      /*       } */
-      /*     } */
-      /*   } */
-      /* } */
     },
     group: {
       basics: {
         label: 'Basics',
-        fields: [ 'description', 'color' /* '_page' */ ]
+        fields: [
+          'orderReady',
+          'hasCoupon',
+          'coupon',
+          'description',
+          'color'
+        ]
       }
     }
   },
   methods(self) {
     return {
+      getOrdersCount() {
+        return 9;
+      },
       getChapters(req, data) {
         return [
           {

@@ -11,7 +11,8 @@ module.exports = {
           widgets: {
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {
-              minSize: [ 1000, 1000 ]
+              aspectRatio: [ 2, 1 ],
+              minSize: [ 1000, 500 ]
             },
             '@apostrophecms/video': {},
             '@apostrophecms-pro/data-set': {},
