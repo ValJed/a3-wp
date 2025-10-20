@@ -80,7 +80,7 @@ module.exports = {
   },
   methods(self) {
     return {
-      getOrdersCount() {
+      getOrdersCount () {
         return 9;
       },
       getChapters(req, data) {

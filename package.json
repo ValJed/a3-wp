@@ -10,6 +10,11 @@
     "serve": "NODE_ENV=production node app",
     "release": "npm install && npm run build && node app @apostrophecms/migration:migrate"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  },
   "nodemonConfig": {
     "delay": 1000,
     "verbose": true,
@@ -48,13 +53,17 @@
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
     "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
     "@apostrophecms-pro/palette": "github:apostrophecms/palette",
+    "@apostrophecms-pro/section-template-library": "github:apostrophecms/section-template-library",
+    "@apostrophecms-pro/signup": "^2.0.2",
     "@apostrophecms/form": "^1.4.2",
     "@apostrophecms/import-export": "github:apostrophecms/import-export",
+    "@apostrophecms/passport-bridge": "^1.5.2",
     "@apostrophecms/redirect": "github:apostrophecms/redirect",
     "@apostrophecms/scheduled-publishing": "github:apostrophecms/scheduled-publishing",
     "@apostrophecms/vite": "github:apostrophecms/vite",
     "apostrophe": "github:apostrophecms/apostrophe",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "passport-github2": "^0.1.12"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.25.7",
