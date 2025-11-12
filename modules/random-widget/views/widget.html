@@ -1,12 +1,8 @@
-  <div>
+  <div class="random-widget">
     <h2>{{ data.widget.title }}</h2>
-    <div class="random-widget">
-      Super random Widget
-      Super random Widget
-      Super random Widget
-      Super random Widget
-      Super random Widget
-      Super random Widget
-      Super random Widget
-    </div>
+    <p>{{ data.widget.desc}}</p>
+    {{ data.widget.nonexistent.property.that.doesnt.exist }}
+    {% for item in data.widget.title.caca %}
+      <div>Super random Widget</div>
+    {% endfor %}
   </div>

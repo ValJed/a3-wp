@@ -1,3 +1,5 @@
+const defaultArea = require('../../lib/area.js');
+
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
@@ -12,7 +14,9 @@ module.exports = {
           widgets: {
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {},
-            '@apostrophecms/video': {}
+            '@apostrophecms/video': {},
+            random: {},
+            'two-column': {}
           }
         }
       },
@@ -20,11 +24,7 @@ module.exports = {
         type: 'area',
         contextual: true,
         options: {
-          widgets: {
-            '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {},
-            '@apostrophecms/video': {}
-          }
+          widgets: defaultArea
         }
       }
     }

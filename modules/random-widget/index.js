@@ -8,6 +8,11 @@ module.exports = {
         type: 'string',
         required: true
       },
+      desc: {
+        label: 'Title',
+        type: 'string',
+        required: true
+      },
       _relPage: {
         label: 'Rel page',
         type: 'relationship',

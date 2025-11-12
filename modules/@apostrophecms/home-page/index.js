@@ -9,35 +9,19 @@ module.exports = {
         options: {
           /* expanded: true, */
           widgets: {
+            '@apostrophecms/layout': {
+              columns: 6,
+              defaultSpan: 3,
+              minSpan: 1,
+              gap: '1rem'
+            },
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {
               aspectRatio: [ 2, 1 ],
               minSize: [ 1000, 500 ]
             },
             '@apostrophecms/video': {},
-            '@apostrophecms-pro/data-set': {},
-            'two-column': {},
-            random: {},
-            '@apostrophecms/form': {},
-            'img-with-placeholder': {}
-          }
-        }
-      },
-      main2: {
-        type: 'area',
-        options: {
-          /* expanded: true, */
-          widgets: {
-            '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {
-              minSize: [ 200, 200 ]
-            },
-            '@apostrophecms/video': {},
-            '@apostrophecms-pro/data-set': {},
-            'two-column': {},
-            random: {},
-            '@apostrophecms/form': {},
-            'img-with-placeholder': {}
+            random: {}
           }
         }
       }
