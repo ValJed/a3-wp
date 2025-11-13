@@ -1,5 +1,6 @@
 module.exports = {
   options: {
+    linkWithType: [ '@apostrophecms/any-page-type', 'article' ],
     imageStyles: [
       {
         value: 'image-float-left',

@@ -11,13 +11,7 @@ module.exports = {
         type: 'area',
         contextual: true,
         options: {
-          widgets: {
-            '@apostrophecms/rich-text': {},
-            '@apostrophecms/image': {},
-            '@apostrophecms/video': {},
-            random: {},
-            'two-column': {}
-          }
+          widgets: defaultArea
         }
       },
       two: {
