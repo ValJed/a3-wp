@@ -98,6 +98,7 @@ require('apostrophe')({
     topic: {},
     'random-widget': {},
     'two-column-widget': {},
+    'content-widget': {},
     '@apostrophecms-pro/palette': {},
     '@apostrophecms-pro/advanced-permission-group': {},
     '@apostrophecms-pro/advanced-permission': {},
