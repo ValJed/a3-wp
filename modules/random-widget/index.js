@@ -9,7 +9,7 @@ module.exports = {
         required: true
       },
       desc: {
-        label: 'Title',
+        label: 'Desc',
         type: 'string',
         required: true
       },
