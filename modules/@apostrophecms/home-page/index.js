@@ -7,21 +7,26 @@ module.exports = {
       main: {
         type: 'area',
         options: {
-          /* expanded: true, */
           widgets: {
-            '@apostrophecms/layout': {
-              columns: 6,
-              defaultSpan: 3,
-              minSpan: 1,
-              gap: '1rem'
-            },
+            '@apostrophecms/layout': {},
+            '@apostrophecms/rich-text': {},
+            '@apostrophecms/image': { },
+            '@apostrophecms/video': {},
+            '@apostrophecms/form': {}
+          }
+        }
+      },
+      main2: {
+        type: 'area',
+        options: {
+          widgets: {
+            '@apostrophecms/layout': {},
             '@apostrophecms/rich-text': {},
             '@apostrophecms/image': {
-              aspectRatio: [ 2, 1 ],
-              minSize: [ 1000, 500 ]
+              minSize: [ 200, 200 ]
             },
             '@apostrophecms/video': {},
-            random: {}
+            '@apostrophecms/form': {}
           }
         }
       }
@@ -31,7 +36,8 @@ module.exports = {
         label: 'Basics',
         fields: [
           'title',
-          'main'
+          'main',
+          'main2'
         ]
       }
     }
